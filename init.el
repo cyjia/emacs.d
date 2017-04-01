@@ -164,6 +164,12 @@
 (require 'init-locales)
 
 
+;;---------------------------------------------------------------------------
+;; Global org mode
+;;---------------------------------------------------------------------------
+(setq org-agenda-files
+      (list "~/antfin/work.org"))
+
 (provide 'init)
 
 ;; Local Variables:
