@@ -168,7 +168,8 @@
 ;; Global org mode
 ;;---------------------------------------------------------------------------
 (setq org-agenda-files
-      (list "~/antfin/work.org"))
+      (list "~/antfin/work.org"
+            "~/me.org"))
 
 (provide 'init)
 
