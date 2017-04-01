@@ -59,7 +59,7 @@
 (require 'init-grep)
 (require 'init-uniquify)
 (require 'init-ibuffer)
-(require 'init-flycheck)
+;;(require 'init-flycheck)
 
 (require 'init-recentf)
 (require 'init-smex)
@@ -81,7 +81,7 @@
 (require 'init-vc)
 (require 'init-darcs)
 (require 'init-git)
-(require 'init-github)
+;;(require 'init-github)
 
 (require 'init-projectile)
 
@@ -90,22 +90,25 @@
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
-(require 'init-erlang)
-(require 'init-javascript)
-(require 'init-php)
+;;(require 'init-erlang)
+;;(require 'init-javascript)
+;;(require 'init-php)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-html)
-(require 'init-css)
-(require 'init-haml)
+;;(require 'init-css)
+;;(require 'init-haml)
 (require 'init-python-mode)
-(unless (version<= emacs-version "24.3")
-  (require 'init-haskell))
-(require 'init-elm)
-(require 'init-ruby-mode)
-(require 'init-rails)
-(require 'init-sql)
-(require 'init-golang)
+
+;; (unless (version<= emacs-version "24.3")
+;;   (require 'init-haskell))
+
+;;(require 'init-elm)
+;;(require 'init-ruby-mode)
+;;(require 'init-rails)
+;;(require 'init-sql)
+;;(require 'init-golang)
+;;(require 'init-gradle)
 
 (require 'init-paredit)
 (require 'init-lisp)
@@ -121,12 +124,12 @@
 (require 'init-misc)
 
 (require 'init-folding)
-(require 'init-dash)
+;;(require 'init-dash)
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
-(require-package 'lua-mode)
+;;(require-package 'lua-mode)
 (require-package 'htmlize)
 (require-package 'dsvn)
 (when *is-a-mac*
@@ -136,9 +139,10 @@
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
 ;;----------------------------------------------------------------------------
-(require 'server)
-(unless (server-running-p)
-  (server-start))
+;;(require 'server)
+
+;; (unless (server-running-p)
+;;   (server-start))
 
 
 ;;----------------------------------------------------------------------------
