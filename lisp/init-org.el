@@ -356,7 +356,21 @@ typical word processor."
      (screen . nil)
      (,(if (locate-library "ob-sh") 'sh 'shell) . t)
      (sql . nil)
-     (sqlite . t))))
+     (sqlite . t)
+     (plantuml . t))))
 
+;; tell org-mode where to find the plantuml JAR file
+(setq org-plantuml-jar-path (expand-file-name "~/plantuml.jar"))
+
+;; helper function
+(defun my-org-confirm-babel-evaluate (lang body)
+  "Do not ask for confirmation to evaluate code for specified lanaguages"
+  (not (member lang '("plantuml"))))
+
+;; trust certain code as being safe
+(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
+
+;; automatically show the resulting image
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images)
 
 (provide 'init-org)
